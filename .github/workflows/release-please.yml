@@ -13,16 +13,17 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: googleapis/release-please-action@v4
         id: release
         name: Release Please
         with:
           token: ${{ secrets.PAT }}
           release-type: 'simple'
-          path: '.'
+          path: 'src/attestation-client'
     outputs:
-      VERSION: "${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}"
-      RELEASE_CREATED: ${{ steps.release.outputs.release_created }}
+      VERSION: "${{ steps.release.outputs['src/attestation-client--major'] }}.${{ steps.release.outputs['src/attestation-client--minor'] }}.${{ steps.release.outputs['src/attestation-client--patch'] }}"
+      RELEASE_CREATED: ${{ steps.release.outputs['src/attestation-client--release_created'] }}
   troubleshoot:
     needs: release
     runs-on: ubuntu-latest
