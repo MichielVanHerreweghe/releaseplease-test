@@ -21,10 +21,10 @@ jobs:
           release-type: 'simple'
           path: '.'
       - run: |
-          echo "${{ steps.release.outputs['.--major'] }}.${{ steps.release.outputs['.--minor'] }}.${{ steps.release.outputs['.--patch'] }}"
+          echo "${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}"
     outputs:
-      RELEASE_CREATED: ${{ steps.release.outputs['.--release_created'] }}
-      VERSION: "${{ steps.release.outputs['.--major'] }}.${{ steps.release.outputs['.--minor'] }}.${{ steps.release.outputs['.--patch'] }}"
+      RELEASE_CREATED: ${{ steps.release.outputs.release_created }}
+      VERSION: "${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}"
 
   deliver:
     needs: release
