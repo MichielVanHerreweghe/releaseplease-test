@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v2.0.0...v2.0.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* added troubleshoot ([b5eab6d](https://github.com/MichielVanHerreweghe/releaseplease-test/commit/b5eab6d7e42a7efde71c85d61dbc87e6e8276702))
+* release script ([696c624](https://github.com/MichielVanHerreweghe/releaseplease-test/commit/696c6244abf8f1adc27713344003e9ab54fb6c49))
+
 ## [2.0.0](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v1.1.1...v2.0.0) (2024-10-15)
 
 
