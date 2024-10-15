@@ -23,7 +23,13 @@ jobs:
     outputs:
       VERSION: "${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}"
       RELEASE_CREATED: ${{ steps.release.outputs.release_created }}
-
+  troubleshoot:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Version: ${{ needs.release.outputs.VERSION }}"
+          echo "Release Created: ${{ needs.release.outputs.RELEASE_CREATED }}"
   deliver:
     needs: release
     if: ${{ needs.release.outputs.RELEASE_CREATED }}
