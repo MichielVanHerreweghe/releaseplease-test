@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v1.0.0...v1.0.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* adjusted pipeline ([4e8052e](https://github.com/MichielVanHerreweghe/releaseplease-test/commit/4e8052e8c2dd3de4832b4cff92d07ce52c5d0945))
+
 ## 1.0.0 (2024-10-15)
 
 
