@@ -17,6 +17,6 @@ jobs:
         id: release
         name: Release Please
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           release-type: 'simple'
           path: '.'
