@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v1.0.2...v1.1.0) (2024-10-15)
+
+
+### Features
+
+* moved ([eda5d29](https://github.com/MichielVanHerreweghe/releaseplease-test/commit/eda5d2922163e0c9e3a14d3277f6b4954deeaa42))
+
 ## [1.0.2](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v1.0.1...v1.0.2) (2024-10-15)
 
 
