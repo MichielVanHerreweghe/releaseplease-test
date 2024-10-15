@@ -12,5 +12,6 @@ jobs:
   deliver:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: |
           docker build --tag application:${{ github.event.release.tag_name }} --file src/Dockerfile .
