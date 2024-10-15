@@ -1,11 +1,8 @@
 name: Version
 
 on:
-  workflow_call:
-    inputs:
-      VERSION:
-        required: true
-        type: string
+  release: 
+    types: [created]
 
 permissions:
   contents: write
@@ -16,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          docker build --tag application:${{ inputs.VERSION }} --file src/Dockerfile .
+          docker build --tag application:${{ github.event.release.tag_name }} --file src/Dockerfile .
