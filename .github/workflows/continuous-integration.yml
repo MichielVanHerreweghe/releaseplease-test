@@ -16,4 +16,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-            docker build --tag application:latest --file src/Dockerfile .
+            docker build --tag application:latest --file ./src/Dockerfile .
