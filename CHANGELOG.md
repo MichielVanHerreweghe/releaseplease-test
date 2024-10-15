@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v1.1.1...v2.0.0) (2024-10-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* new release script
+
+### Features
+
+* new release script ([175c150](https://github.com/MichielVanHerreweghe/releaseplease-test/commit/175c15086a282837aee76c922a6acec2802470ac))
+
 ## [1.1.1](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v1.1.0...v1.1.1) (2024-10-15)
 
 
