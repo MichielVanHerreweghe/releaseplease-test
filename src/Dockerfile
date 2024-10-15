@@ -1,1 +1,2 @@
 FROM ubuntu:24.04
+ARG DOCKER=2.0.2
