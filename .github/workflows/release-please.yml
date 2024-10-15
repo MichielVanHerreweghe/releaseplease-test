@@ -22,6 +22,7 @@ jobs:
           path: '.'
       - run: |
           echo "${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}"
+          echo "${{ steps.release.outputs.release_created }}"
     outputs:
       RELEASE_CREATED: ${{ steps.release.outputs.release_created }}
       VERSION: "${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}"
