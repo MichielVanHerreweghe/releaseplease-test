@@ -13,13 +13,22 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - uses: googleapis/release-please-action@v4
         id: release
         name: Release Please
         with:
-          token: ${{ github.token}}
+          token: ${{ secrets.PAT }}
           release-type: 'simple'
-      - if: ${{ steps.release.outputs.release_created == 'true' }}
-        run: |
-          docker build --tag application:${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }} --file src/Dockerfile .
+          path: '.'
+    outputs:
+      VERSION: "${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}"
+      RELEASE_CREATED: ${{ steps.release.outputs.release_created }}
+
+  deliver:
+    needs: release
+    if: ${{ needs.release.outputs.RELEASE_CREATED }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          docker build --tag application:${{ needs.release.outputs.VERSION }} --file src/Dockerfile .
