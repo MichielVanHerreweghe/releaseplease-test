@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.1](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v1.1.0...v1.1.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* adjusted release script ([5ec9fcc](https://github.com/MichielVanHerreweghe/releaseplease-test/commit/5ec9fcc53f38a5ad9b9889693552d1f1ef1d0216))
+* adjusted run troubleshoot ([282cbb6](https://github.com/MichielVanHerreweghe/releaseplease-test/commit/282cbb6d835d8df4a09a59dbc26d4810821a9e22))
+* removed pathing ([9378614](https://github.com/MichielVanHerreweghe/releaseplease-test/commit/9378614b74e80dce97471701de2ecb6e5cc461b5))
+
 ## [1.1.0](https://github.com/MichielVanHerreweghe/releaseplease-test/compare/v1.0.2...v1.1.0) (2024-10-15)
 
 
