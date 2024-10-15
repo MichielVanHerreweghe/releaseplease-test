@@ -1,0 +1,19 @@
+name: Version
+
+on:
+  workflow_call:
+    inputs:
+      VERSION:
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          docker build --tag application:${{ inputs.VERSION }} --file src/Dockerfile .

@@ -1,0 +1,19 @@
+name: Continouse Integration
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+            docker build --tag application:latest --file src/Dockerfile .
